@@ -1,0 +1,10 @@
+C:\Users\juanf\Documents\Projects\Empty-CS\Empty-CS\bin\Release\CleanJPEG.exe.config
+C:\Users\juanf\Documents\Projects\Empty-CS\Empty-CS\bin\Release\CleanJPEG.exe
+C:\Users\juanf\Documents\Projects\Empty-CS\Empty-CS\bin\Release\CleanJPEG.pdb
+C:\Users\juanf\Documents\Projects\Empty-CS\Empty-CS\bin\Release\System.Net.Http.dll
+C:\Users\juanf\Documents\Projects\Empty-CS\Empty-CS\bin\Release\System.Net.Http.xml
+C:\Users\juanf\Documents\Projects\Empty-CS\Empty-CS\obj\Release\CleanJPEG.exe
+C:\Users\juanf\Documents\Projects\Empty-CS\Empty-CS\obj\Release\CleanJPEG.pdb
+C:\Users\juanf\Documents\Projects\CleanJPEG\CleanJPEG\bin\Release\CleanJPEG.exe.config
+C:\Users\juanf\Documents\Projects\CleanJPEG\CleanJPEG\obj\Release\CleanJPEG.exe
+C:\Users\juanf\Documents\Projects\CleanJPEG\CleanJPEG\obj\Release\CleanJPEG.pdb
