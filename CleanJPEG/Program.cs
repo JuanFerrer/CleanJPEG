@@ -13,31 +13,30 @@ namespace CleanJPEG
     {
         static void Main(string[] args)
         {
-            string file = args[0];
-            string destFile = args.Length == 1? file : args[1];
-            byte[] bytes = new byte[1];
-            if (File.Exists(file))
+            if (args.Length < 0)
             {
-                bytes = GetHexFromFile(file);
-            }
-            int discardBeforeIndex = 0;
-            for (int i = 0; i < bytes.Length; ++i)
-            {
-                #if DEBUG
-                Console.Write(bytes[i].ToString("X2") + " ");
-                #endif
-                if (bytes[i] == 0xFF && bytes[i + 1] == 0xD8)
+                string file = args[0];
+                string destFile = args.Length == 1 ? file : args[1];
+                byte[] bytes = new byte[1];
+                if (File.Exists(file))
                 {
-                    # if DEBUG
-                    Console.WriteLine("Signature found at " + i);
-                    #endif
-                    discardBeforeIndex = i;
-                    break;
+                    bytes = GetHexFromFile(file);
                 }
+                int discardBeforeIndex = 0;
+                for (int i = 0; i < bytes.Length; ++i)
+                {
+                    Debug.Write(bytes[i].ToString("X2") + " ");
+                    if (bytes[i] == 0xFF && bytes[i + 1] == 0xD8)
+                    {
+                        Debug.WriteLine("Signature found at " + i);
+                        discardBeforeIndex = i;
+                        break;
+                    }
+                }
+                byte[] newBytes = new byte[bytes.Length - discardBeforeIndex];
+                Array.Copy(bytes, discardBeforeIndex, newBytes, 0, bytes.Length - discardBeforeIndex);
+                ByteArrayToFile(destFile, newBytes);
             }
-            byte[] newBytes = new byte[bytes.Length - discardBeforeIndex];
-            Array.Copy(bytes, discardBeforeIndex, newBytes, 0, bytes.Length - discardBeforeIndex);
-            ByteArrayToFile(destFile, newBytes);
         }
 
         static byte[] GetHexFromFile(string file)
