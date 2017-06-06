@@ -13,7 +13,7 @@ namespace CleanJPEG
     {
         static void Main(string[] args)
         {
-            if (args.Length < 0)
+            if (args.Length > 0)
             {
                 string file = args[0];
                 string destFile = args.Length == 1 ? file : args[1];
